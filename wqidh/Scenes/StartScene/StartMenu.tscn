@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://5melckopckw7"]
+
+[ext_resource type="Script" uid="uid://cx08wbd3jl573" path="res://Scenes/StartScene/StartMenu.cs" id="1_vinke"]
+[ext_resource type="Texture2D" uid="uid://ccwa8fgrhixh8" path="res://Scenes/StartScene/MidnightMysteries.png" id="2_xjqlr"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vinke")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.120284, 0, 0.00082294, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 276.0
+offset_top = 9.0
+offset_right = 924.0
+offset_bottom = 1009.0
+grow_horizontal = 2
+scale = Vector2(0.330251, 0.288684)
+texture = ExtResource("2_xjqlr")
+stretch_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 530.0
+offset_top = 41.0
+offset_right = 586.0
+offset_bottom = 107.0
+grow_vertical = 2
+scale = Vector2(1.50197, 1.53041)
+
+[node name="StartBtn" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "START
+"
+
+[node name="QuitBtn" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "QUIT
+"
