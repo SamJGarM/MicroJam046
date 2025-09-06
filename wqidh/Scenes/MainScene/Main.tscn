@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ddd3s0amfegl7" path="res://Scenes/LandlineOverlay/LandlineOverlay.tscn" id="3_t73p4"]
 [ext_resource type="PackedScene" uid="uid://bwhukow2aqsri" path="res://Scenes/CellOverlay/CellOverlay.tscn" id="4_hgqpj"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_743je"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_lvdhj"]
 
 [node name="MainScene" type="Node2D"]
 
@@ -42,6 +42,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Background Layer" type="CanvasLayer" parent="."]
+layer = -1
 
 [node name="BackgroundImage" type="TextureRect" parent="Background Layer"]
 anchors_preset = -1
@@ -49,7 +50,7 @@ anchor_right = 1.001
 anchor_bottom = 1.0
 offset_right = -0.1521
 offset_bottom = 1.0
-texture = SubResource("CanvasTexture_743je")
+texture = SubResource("CanvasTexture_lvdhj")
 
 [node name="Overlays" type="Node2D" parent="."]
 
