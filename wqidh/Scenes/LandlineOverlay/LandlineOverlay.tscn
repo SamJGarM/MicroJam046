@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://ddd3s0amfegl7"]
+
+[node name="LandlineOverlay" type="Node2D"]
