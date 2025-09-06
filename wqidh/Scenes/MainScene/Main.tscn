@@ -1,17 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://b18tlnvmp01m3"]
+[gd_scene load_steps=6 format=3 uid="uid://b18tlnvmp01m3"]
 
 [ext_resource type="Script" uid="uid://dpegiq8d43egj" path="res://Scenes/MainScene/MainDesk.cs" id="1_k3y1t"]
+[ext_resource type="PackedScene" uid="uid://c54cb4sew1j65" path="res://Scenes/ComputerOverlay/ComputerOverlay.tscn" id="2_lvdhj"]
+[ext_resource type="PackedScene" uid="uid://ddd3s0amfegl7" path="res://Scenes/LandlineOverlay/LandlineOverlay.tscn" id="3_t73p4"]
+[ext_resource type="PackedScene" uid="uid://bwhukow2aqsri" path="res://Scenes/CellOverlay/CellOverlay.tscn" id="4_hgqpj"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_743je"]
 
 [node name="MainScene" type="Node2D"]
 
 [node name="MainDesk" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 script = ExtResource("1_k3y1t")
+
+[node name="Desk" type="TextureRect" parent="MainDesk"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 647.0
 
 [node name="FadeTransition" type="ColorRect" parent="MainDesk"]
 layout_mode = 1
@@ -38,13 +44,31 @@ offset_bottom = 40.0
 [node name="Background Layer" type="CanvasLayer" parent="."]
 
 [node name="BackgroundImage" type="TextureRect" parent="Background Layer"]
-offset_right = 1153.0
-offset_bottom = 649.0
+anchors_preset = -1
+anchor_right = 1.001
+anchor_bottom = 1.0
+offset_right = -0.1521
+offset_bottom = 1.0
+texture = SubResource("CanvasTexture_743je")
 
-[node name="Node" type="Node" parent="."]
+[node name="Overlays" type="Node2D" parent="."]
 
-[node name="LandlineAudioPlayer" type="AudioStreamPlayer2D" parent="Node"]
+[node name="ComputerOverlay" type="CanvasLayer" parent="Overlays"]
 
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="Node"]
+[node name="ComputerOverlay" parent="Overlays/ComputerOverlay" instance=ExtResource("2_lvdhj")]
 
-[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="Node"]
+[node name="LandlineOverlay" type="CanvasLayer" parent="Overlays"]
+
+[node name="LandlineOverlay" parent="Overlays/LandlineOverlay" instance=ExtResource("3_t73p4")]
+
+[node name="CellOverlay" type="CanvasLayer" parent="Overlays"]
+
+[node name="CellOverlay" parent="Overlays/CellOverlay" instance=ExtResource("4_hgqpj")]
+
+[node name="Audio Players" type="Node2D" parent="."]
+
+[node name="ComputerAudioPlayer" type="AudioStreamPlayer2D" parent="Audio Players"]
+
+[node name="LandlineAudioPlayer" type="AudioStreamPlayer2D" parent="Audio Players"]
+
+[node name="CellAudioPlayer" type="AudioStreamPlayer2D" parent="Audio Players"]
