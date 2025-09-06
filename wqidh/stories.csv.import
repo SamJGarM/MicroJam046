@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://8lp657r0uwr6"
+
+[deps]
+
+files=["res://stories.Title.translation", "res://stories.ReproLength.translation", "res://stories.ExpiryLength.translation", "res://stories.Popularity.translation", "res://stories.Description.translation"]
+
+source_file="res://stories.csv"
+dest_files=["res://stories.Title.translation", "res://stories.ReproLength.translation", "res://stories.ExpiryLength.translation", "res://stories.Popularity.translation", "res://stories.Description.translation"]
+
+[params]
+
+compress=true
+delimiter=0
