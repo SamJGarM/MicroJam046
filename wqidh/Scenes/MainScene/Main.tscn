@@ -59,10 +59,12 @@ texture = SubResource("CanvasTexture_lvdhj")
 [node name="ComputerOverlay" parent="Overlays/ComputerOverlay" instance=ExtResource("2_lvdhj")]
 
 [node name="LandlineOverlay" type="CanvasLayer" parent="Overlays"]
+visible = false
 
 [node name="LandlineOverlay" parent="Overlays/LandlineOverlay" instance=ExtResource("3_t73p4")]
 
 [node name="CellOverlay" type="CanvasLayer" parent="Overlays"]
+visible = false
 
 [node name="CellOverlay" parent="Overlays/CellOverlay" instance=ExtResource("4_hgqpj")]
 
