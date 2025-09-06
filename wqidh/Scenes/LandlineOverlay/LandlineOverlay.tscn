@@ -1,3 +1,29 @@
-[gd_scene format=3 uid="uid://ddd3s0amfegl7"]
+[gd_scene load_steps=2 format=3 uid="uid://ddd3s0amfegl7"]
 
-[node name="LandlineOverlay" type="Node2D"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_ercg5"]
+
+[node name="LandlineOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("CanvasTexture_ercg5")
